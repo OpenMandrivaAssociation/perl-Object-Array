@@ -13,17 +13,15 @@ Source:     http://www.cpan.org/modules/by-module/Object/%{realname}-%{version}.
 Url:        http://search.cpan.org/dist/%{realname}
 BuildRoot:  %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildRequires: perl-devel
-
+BuildRequires: perl(Sub::Exporter)
+BuildRequires: perl(Sub::Install)
+BuildRequires: perl(List::MoreUtils)
 
 BuildArch: noarch
 
 %description
 Add methods to Object::Array corresponding to functions from
 List::MoreUtils.
-
-
-
-
 
 %prep
 %setup -q -n %{realname}-%{version} 
