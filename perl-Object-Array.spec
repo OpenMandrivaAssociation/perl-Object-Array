@@ -1,17 +1,14 @@
-
 %define realname   Object-Array
-%define version    0.060
-%define release    %mkrel 3
+%define upstream_version    0.060
 
 Name:       perl-%{realname}
-Version:    %{version}
-Release:    %{release}
+Version:    %perl_convert_version %{upstream_version}
+Release:    4
 License:    GPL or Artistic
 Group:      Development/Perl
 Summary:    Array references with accessors
-Source:     http://www.cpan.org/modules/by-module/Object/%{realname}-%{version}.tar.gz
+Source:     http://www.cpan.org/modules/by-module/Object/Object-Array-%{upstream_version}.tar.gz
 Url:        http://search.cpan.org/dist/%{realname}
-BuildRoot:  %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildRequires: perl-devel
 BuildRequires: perl(Sub::Exporter)
 BuildRequires: perl(Sub::Install)
@@ -24,7 +21,7 @@ Add methods to Object::Array corresponding to functions from
 List::MoreUtils.
 
 %prep
-%setup -q -n %{realname}-%{version} 
+%setup -q -n %{realname}-%{upstream_version}
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
@@ -34,14 +31,9 @@ List::MoreUtils.
 make test
 
 %install
-rm -rf %buildroot
 %makeinstall_std
 
-%clean
-rm -rf %buildroot
-
 %files
-%defattr(-,root,root)
 %doc README Changes
 %{_mandir}/man3/*
 %perl_vendorlib/*
@@ -66,4 +58,5 @@ rm -rf %buildroot
 
 * Fri Feb 20 2009 cpan2dist 0.060-1mdv
 - initial mdv release, generated with cpan2dist
+
 
