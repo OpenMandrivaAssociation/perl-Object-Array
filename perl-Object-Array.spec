@@ -8,7 +8,7 @@ License:    GPL or Artistic
 Group:      Development/Perl
 Summary:    Array references with accessors
 Source:     http://www.cpan.org/modules/by-module/Object/Object-Array-%{upstream_version}.tar.gz
-Url:        http://search.cpan.org/dist/%{realname}
+Url:        https://search.cpan.org/dist/%{realname}
 BuildRequires: perl-devel
 BuildRequires: perl(Sub::Exporter)
 BuildRequires: perl(Sub::Install)
