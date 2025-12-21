@@ -9,6 +9,7 @@ Group:      Development/Perl
 Summary:    Array references with accessors
 Source:     http://www.cpan.org/modules/by-module/Object/Object-Array-%{upstream_version}.tar.gz
 Url:        https://search.cpan.org/dist/%{realname}
+BuildRequires:	make
 BuildRequires: perl-devel
 BuildRequires: perl(Sub::Exporter)
 BuildRequires: perl(Sub::Install)
