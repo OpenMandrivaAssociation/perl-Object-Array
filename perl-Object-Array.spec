@@ -2,13 +2,13 @@
 %define upstream_version    0.060
 
 Name:       perl-%{realname}
-Version:    %perl_convert_version %{upstream_version}
-Release:    6
+Version:    %{upstream_version}
+Release:    7
 License:    GPL or Artistic
 Group:      Development/Perl
 Summary:    Array references with accessors
-Source:     http://www.cpan.org/modules/by-module/Object/Object-Array-%{upstream_version}.tar.gz
-Url:        https://search.cpan.org/dist/%{realname}
+Source:     https://cpan.metacpan.org/authors/id/H/HD/HDP/Object-Array-%{upstream_version}.tar.gz
+Url:        https://metacpan.org/dist/Object-Array
 BuildRequires:	make
 BuildRequires: perl-devel
 BuildRequires: perl(Sub::Exporter)
